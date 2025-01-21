@@ -15,7 +15,6 @@
   "airline",
   "vehicle",
   "rental_company",
-  "status",
   "price_for_round_trip",
   "departure_and_arrival_information_section",
   "departure_date",
@@ -60,13 +59,6 @@
    "in_list_view": 1,
    "label": "Departure Date",
    "reqd": 1
-  },
-  {
-   "default": "Scheduled",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Scheduled\nCanceled\nCompleted"
   },
   {
    "depends_on": "eval:doc.type === 'Flight'",
@@ -228,7 +220,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-18 21:32:49.521218",
+ "modified": "2025-01-20 13:26:35.006522",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Trip",

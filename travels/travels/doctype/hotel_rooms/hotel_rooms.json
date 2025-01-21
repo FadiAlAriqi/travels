@@ -14,6 +14,7 @@
   {
    "fieldname": "rooms",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Rooms",
    "options": "Room",
    "unique": 1
@@ -21,6 +22,7 @@
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
    "options": "Available\nBooked\nNot Available"
   }
@@ -28,7 +30,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-01-13 10:31:26.256812",
+ "modified": "2025-01-20 13:41:46.354478",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Hotel Rooms",

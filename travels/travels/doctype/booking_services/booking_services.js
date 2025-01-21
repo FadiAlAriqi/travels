@@ -96,7 +96,7 @@ frappe.ui.form.on("Booking Services", {
         let total = 0;
 
         for (let item of frm.doc.ticket) {
-            total += item.booking_amount || 0;
+            total += item.total_ticket_amount || 0;
         }
 
         frm.set_value("total_tickets_amount", total);
@@ -129,6 +129,27 @@ frappe.ui.form.on("Vehicle Rental Package", {
 
 
 frappe.ui.form.on("Hotel Rental Package", {
+    refresh: function(frm) {
+        frm.fields_dict['hotel'].grid.add_custom_button(__('Make Payment'), function() {
+            let selected_row = frm.fields_dict['Hotel'].grid.get_selected_children()[0];
+            if (selected_row) {
+                frappe.call({
+                    method: 'travels.api.make_payment_entry',
+                    args: {
+                        source_name: selected_row.name
+                    },
+                    callback: function(r) {
+                        if (r.message) {
+                            frappe.set_route('Form', 'Payment Entry', r.message.name);
+                        }
+                    }
+                });
+            } else {
+                frappe.msgprint(__('Please select a row first.'));
+            }
+        });
+    },
+
 
     hotel(frm, cdt, cdn) {
         frm.trigger("calculate_total_hotels_amount");
@@ -139,30 +160,43 @@ frappe.ui.form.on("Hotel Rental Package", {
         frm.trigger("calculate_total_hotels_amount");
         frm.trigger("calculate_total");
     },
-    // payment: function(frm, cdt, cdn) {
-    //     // احصل على بيانات الصف المحدد
-    //     let row = frappe.get_doc(cdt, cdn);
+    payment: function(frm, cdt, cdn) {
+        // احصل على بيانات الصف المحدد
+        let row = frappe.get_doc(cdt, cdn);
 
-    //     // تحقق من وجود اسم الفندق
-    //     if (!row.hotel) {
-    //         frappe.msgprint(__('Please select a Hotel before making a payment.'));
-    //         return;
-    //     }
+        // تحقق من وجود اسم الفندق
+        if (!row.hotel) {
+            frappe.msgprint(__('Please select a Hotel before making a payment.'));
+            return;
+        }
 
-    //     // استدعاء دالة Python لإنشاء Payment Entry
-    //     frappe.call({
-    //         method: "travels.api.make_payment_entry_from_hotel",
-    //         args: {
-    //             source_name: cur_frm.doc.name, // اسم السجل الحالي
-    //             hotel_name: row.hotel_name     // اسم الفندق من الجدول
-    //         },
-    //         callback: function (r) {
-    //             if (r.message) {
-    //                 frappe.set_route("Form", "Payment Entry", r.message.name);
-    //             }
-    //         }
-    //     });
+        // استدعاء دالة Python لإنشاء Payment Entry
+        frappe.call({
+            method: "travels.api.make_payment_entry",
+            args: {
+                source_name: cur_frm.doc.name, // اسم السجل الحالي
+                hotel_name: row.hotel_name     // اسم الفندق من الجدول
+            },
+            callback: function (r) {
+                if (r.message) {
+                    frappe.set_route("Form", "Payment Entry", r.message.name);
+                }
+            }
+        });
         
+    }
+    // payment: function (frm, cdt, cdn) {
+    //     let row = frappe.get_doc(cdt, cdn); // جلب بيانات الصف المحدد
+    
+    //     // التحقق من أن الصف يحتوي على البيانات المطلوبة
+    //     if (row) {
+    //         frappe.new_doc('Payment Entry', {
+    //             party_type: 'Supplier', // يمكنك التغيير إلى قيمة ديناميكية إذا لزم الأمر
+    //             party: row.supplier_name || "Al-Ola", // استخدم الحقل المناسب من الصف
+    //         });
+    //     } else {
+    //         frappe.msgprint(__('لا يمكن العثور على بيانات الصف المحدد.'));
+    //     }
     // }
 });
 

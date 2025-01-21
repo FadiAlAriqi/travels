@@ -175,7 +175,7 @@ class BookingServices(AccountsController):
 
 #calculate total price for all tickets
     def calculate_total_tickets_amount(self):
-        total_tickets_amount = sum(ticket.booking_amount for ticket in self.ticket if ticket.booking_amount)
+        total_tickets_amount = sum(ticket.total_ticket_amount for ticket in self.ticket if ticket.total_ticket_amount)
         
         self.total_tickets_amount = total_tickets_amount
 

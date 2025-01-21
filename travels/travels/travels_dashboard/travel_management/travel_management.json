@@ -2,6 +2,30 @@
  "cards": [
   {
    "card": "Tickets"
+  },
+  {
+   "card": "Tickets Count"
+  },
+  {
+   "card": "One Way Tickets"
+  },
+  {
+   "card": "Return Ticket"
+  },
+  {
+   "card": "Round Ticket"
+  },
+  {
+   "card": "Airlines"
+  },
+  {
+   "card": "Unpaid Hotel Rental"
+  },
+  {
+   "card": "Unpaid Ticket Rental"
+  },
+  {
+   "card": "Unpaid Vehicle Rental"
   }
  ],
  "charts": [
@@ -21,7 +45,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2025-01-19 12:40:45.479237",
+ "modified": "2025-01-20 12:46:55.001539",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Travel Management",

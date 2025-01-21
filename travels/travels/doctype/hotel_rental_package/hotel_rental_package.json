@@ -9,16 +9,19 @@
   "hotel",
   "room_type",
   "price_per_night",
-  "commission_rate",
   "booking_amount",
   "hotel_payable_amount",
   "hotel_commission_amount",
-  "hotel_name"
+  "commission_rate",
+  "hotel_name",
+  "status",
+  "payment"
  ],
  "fields": [
   {
    "fieldname": "hotel",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Hotel",
    "options": "Hotel Booking"
   },
@@ -26,12 +29,14 @@
    "fetch_from": "hotel.rental_type",
    "fieldname": "room_type",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Room Type"
   },
   {
    "fetch_from": "hotel.price_per_night",
    "fieldname": "price_per_night",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Price Per Night"
   },
   {
@@ -44,12 +49,14 @@
    "fetch_from": "hotel.commission_amount",
    "fieldname": "hotel_commission_amount",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Hotel Commission Amount"
   },
   {
    "fetch_from": "hotel.hotel_amount",
    "fieldname": "hotel_payable_amount",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Hotel Payable Amount"
   },
   {
@@ -63,12 +70,25 @@
    "fieldname": "hotel_name",
    "fieldtype": "Data",
    "label": "Hotel Name"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Paid\nUnpaid"
+  },
+  {
+   "bold": 1,
+   "fieldname": "payment",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "label": "Payment"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-01-18 21:26:50.451243",
+ "modified": "2025-01-20 10:47:26.839163",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Hotel Rental Package",

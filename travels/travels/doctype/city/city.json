@@ -17,7 +17,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-19 13:13:34.105652",
+ "modified": "2025-01-19 17:02:41.223250",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "City",
@@ -34,6 +34,13 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Travel Managment",
    "write": 1
   }
  ],

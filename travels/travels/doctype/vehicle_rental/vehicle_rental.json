@@ -11,6 +11,7 @@
   "vehicle_type",
   "column_break_gknb",
   "vehicle",
+  "status",
   "section_break_gzgz",
   "passenger_name",
   "email",
@@ -41,7 +42,7 @@
    "fieldname": "company",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Company",
+   "label": "Rental Company",
    "options": "Transport or Rental Company",
    "reqd": 1
   },
@@ -201,11 +202,20 @@
    "fieldtype": "Float",
    "label": "Commission Rate",
    "read_only": 1
+  },
+  {
+   "default": "Unpaid",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Paid\nUnpaid"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-18 21:32:31.581585",
+ "modified": "2025-01-20 11:02:53.488705",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Vehicle Rental",
@@ -234,5 +244,14 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [
+  {
+   "color": "Green",
+   "title": "Paid"
+  },
+  {
+   "color": "Red",
+   "title": "Unpaid"
+  }
+ ]
 }

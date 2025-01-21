@@ -9,6 +9,8 @@
   "section_break_rkny",
   "passenger_name",
   "seat_number",
+  "status",
+  "booking_status",
   "column_break_xubd",
   "trip",
   "trip_type",
@@ -23,13 +25,12 @@
   "departure_date",
   "column_break_jxfq",
   "departure_time",
-  "column_break_zrbe",
-  "status",
   "section_break_btkf",
   "preference",
   "section_break_iand",
   "trip_price",
   "total_ticket_amount",
+  "airline",
   "column_break_agsf",
   "total_amount",
   "commission_rate",
@@ -75,7 +76,8 @@
    "fieldname": "ticket_type",
    "fieldtype": "Select",
    "label": "Ticket Type",
-   "options": "\nOne Way\nReturn\nRound Trip"
+   "options": "\nOne Way\nReturn\nRound Trip",
+   "reqd": 1
   },
   {
    "allow_in_quick_entry": 1,
@@ -140,15 +142,14 @@
    "label": "Departure Time"
   },
   {
-   "fieldname": "column_break_zrbe",
-   "fieldtype": "Column Break"
-  },
-  {
-   "default": "Booked",
+   "default": "Unpaid",
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
-   "options": "Booked\nCanceled"
+   "options": "Paid\nUnpaid",
+   "read_only": 1
   },
   {
    "allow_in_quick_entry": 1,
@@ -196,11 +197,25 @@
    "fieldname": "commission_amount",
    "fieldtype": "Currency",
    "label": "Commission Amount"
+  },
+  {
+   "fetch_from": "trip.airline",
+   "fieldname": "airline",
+   "fieldtype": "Data",
+   "label": "Airline",
+   "read_only": 1
+  },
+  {
+   "default": "Booked",
+   "fieldname": "booking_status",
+   "fieldtype": "Select",
+   "label": "Booking Status",
+   "options": "Booked\nCompleted\nCanceled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-18 21:40:57.176648",
+ "modified": "2025-01-20 12:52:29.336193",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Ticket Booking",
@@ -229,5 +244,14 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [
+  {
+   "color": "Red",
+   "title": "Unpaid"
+  },
+  {
+   "color": "Green",
+   "title": "Paid"
+  }
+ ]
 }

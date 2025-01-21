@@ -25,7 +25,7 @@ frappe.ui.form.on('Hotel Booking', {
     },
     refresh(frm) {
 
-        // if (frm.doc.docstatus === 1) {
+        if (!frm.is_new()) {
             if (!frm.custom_buttons['Payment']) {
                 frm.add_custom_button(__('Payment'), function() {
                     frappe.msgprint(__('Processing Payment...'));
@@ -41,9 +41,10 @@ frappe.ui.form.on('Hotel Booking', {
                             }
                         }
                     });
+
                 });
             }
-        // }
+        }
     },
     hotel: function (frm) {
         frm.set_query('room', function () {

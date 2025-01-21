@@ -7,6 +7,21 @@ app_license = "mit"
 
 # Apps
 # ------------------
+# doc_events = {
+#     "Hotel Booking": {
+#         "on_update": "travels.travels.doctype.hotel_booking.hotel_booking.make_payment_entry"
+#     }
+# }
+# override_doctype_dashboards = { 
+#     "Hotel Booking":  "travels.travels.doctype.hotel_booking.hotel_booking_dashboard.get_data"
+# }
+
+scheduler_events = {
+    "every_minute": [
+        "travels.travels.api.update_booking_status"
+    ]
+}
+# /home/frappe/frappe-bench/apps/travels/travels/api.py
 
 # required_apps = []
 

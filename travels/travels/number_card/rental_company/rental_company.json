@@ -1,6 +1,6 @@
 {
  "aggregate_function_based_on": "",
- "color": "#CB2929",
+ "color": "#4463F0",
  "creation": "2025-01-19 12:55:18.950784",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -12,7 +12,7 @@
  "is_public": 0,
  "is_standard": 1,
  "label": "Rental Company",
- "modified": "2025-01-19 12:55:18.950784",
+ "modified": "2025-01-19 22:12:33.261997",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Rental Company",
