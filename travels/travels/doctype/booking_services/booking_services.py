@@ -101,7 +101,7 @@ from erpnext.accounts.party import get_party_account
 
 from erpnext.accounts.doctype.bank_account.bank_account import (
 	get_bank_account_details,
-	get_default_company_bank_account,
+	# get_default_company_bank_account,
 	get_party_bank_account,
 )
 from erpnext.accounts.doctype.invoice_discounting.invoice_discounting import (

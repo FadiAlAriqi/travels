@@ -16,11 +16,16 @@ app_license = "mit"
 #     "Hotel Booking":  "travels.travels.doctype.hotel_booking.hotel_booking_dashboard.get_data"
 # }
 
+# Cron Scheduler that be triggered everyday at 12:00:00 AM
 scheduler_events = {
-    "every_minute": [
-        "travels.travels.api.update_booking_status"
-    ]
+	"cron":{
+		"0 0 * * *": [
+			"travels.api.update_booking_status"
+		]
+	}
 }
+
+
 # /home/frappe/frappe-bench/apps/travels/travels/api.py
 
 # required_apps = []

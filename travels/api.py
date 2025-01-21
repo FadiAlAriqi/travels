@@ -237,6 +237,8 @@ def update_booking_status():
     # الحصول على كل التذاكر التي لم تكتمل بعد
     tickets = frappe.get_all('Ticket Booking', filters={'booking_status': 'Booked'}, fields=['name', 'departure_date', 'departure_time'])
     
+    frappe.log_error(f"Error while fadi eating:", "Hi Esmail")
+
     for ticket in tickets:
         departure_datetime = get_datetime(f"{ticket['departure_date']} {ticket['departure_time']}")
         current_datetime = get_datetime(f"{nowdate()} {nowtime()}")
