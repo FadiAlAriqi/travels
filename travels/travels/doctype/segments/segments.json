@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-22 08:22:39.487017",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "departure",
+  "iatacode",
+  "terminal",
+  "arrival",
+  "at",
+  "carriercode",
+  "aircraftcode",
+  "number",
+  "blacklistedineu",
+  "numberofstops",
+  "id",
+  "duration"
+ ],
+ "fields": [
+  {
+   "fieldname": "departure",
+   "fieldtype": "Data",
+   "label": "departure"
+  },
+  {
+   "fieldname": "iatacode",
+   "fieldtype": "Data",
+   "label": "iataCode"
+  },
+  {
+   "fieldname": "terminal",
+   "fieldtype": "Data",
+   "label": "terminal"
+  },
+  {
+   "fieldname": "arrival",
+   "fieldtype": "Data",
+   "label": "arrival"
+  },
+  {
+   "fieldname": "at",
+   "fieldtype": "Date",
+   "label": "at"
+  },
+  {
+   "fieldname": "carriercode",
+   "fieldtype": "Data",
+   "label": "carrierCode"
+  },
+  {
+   "fieldname": "aircraftcode",
+   "fieldtype": "Data",
+   "label": "aircraft.code"
+  },
+  {
+   "fieldname": "number",
+   "fieldtype": "Int",
+   "label": "number"
+  },
+  {
+   "default": "0",
+   "fieldname": "blacklistedineu",
+   "fieldtype": "Check",
+   "label": "blacklistedInEU "
+  },
+  {
+   "fieldname": "numberofstops",
+   "fieldtype": "Int",
+   "label": "numberOfStops"
+  },
+  {
+   "fieldname": "id",
+   "fieldtype": "Data",
+   "label": "id"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "duration"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-22 08:27:12.305376",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Segments",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

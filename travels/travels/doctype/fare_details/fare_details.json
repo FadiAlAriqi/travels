@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-22 08:36:17.135653",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "amenities",
+  "fare_details",
+  "fare_basis",
+  "branded_fare",
+  "class",
+  "cabin",
+  "segment_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "amenities",
+   "fieldtype": "Link",
+   "label": "Amenities",
+   "options": "Amenities"
+  },
+  {
+   "fieldname": "fare_details",
+   "fieldtype": "Data",
+   "label": "Fare Details"
+  },
+  {
+   "fieldname": "fare_basis",
+   "fieldtype": "Data",
+   "label": "fare_basis"
+  },
+  {
+   "fieldname": "branded_fare",
+   "fieldtype": "Data",
+   "label": "branded_fare"
+  },
+  {
+   "fieldname": "class",
+   "fieldtype": "Data",
+   "label": "class"
+  },
+  {
+   "fieldname": "cabin",
+   "fieldtype": "Data",
+   "label": "cabin"
+  },
+  {
+   "fieldname": "segment_id",
+   "fieldtype": "Link",
+   "label": "segment_id",
+   "options": "Segments"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-22 08:39:45.014840",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Fare Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

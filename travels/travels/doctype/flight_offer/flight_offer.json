@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-22 08:10:17.847457",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "id",
+  "type",
+  "source",
+  "instant_ticketing_required",
+  "non_homogeneous",
+  "one_way",
+  "is_upsell_offer",
+  "last_ticketing_date",
+  "last_ticketing_date_time",
+  "number_of_bookable_seats",
+  "currency",
+  "total_price",
+  "base_price",
+  "grand_total_price",
+  "itineraries",
+  "traveler_pricings",
+  "fees"
+ ],
+ "fields": [
+  {
+   "fieldname": "id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "id"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "type"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Data",
+   "label": "source"
+  },
+  {
+   "default": "0",
+   "fieldname": "instant_ticketing_required",
+   "fieldtype": "Check",
+   "label": "instant_ticketing_required"
+  },
+  {
+   "default": "0",
+   "fieldname": "non_homogeneous",
+   "fieldtype": "Check",
+   "label": "non_homogeneous"
+  },
+  {
+   "default": "0",
+   "fieldname": "one_way",
+   "fieldtype": "Check",
+   "label": "one_way"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_upsell_offer",
+   "fieldtype": "Check",
+   "label": "is_upsell_offer"
+  },
+  {
+   "fieldname": "last_ticketing_date",
+   "fieldtype": "Date",
+   "label": "last_ticketing_date"
+  },
+  {
+   "fieldname": "last_ticketing_date_time",
+   "fieldtype": "Datetime",
+   "label": "last_ticketing_date_time"
+  },
+  {
+   "fieldname": "number_of_bookable_seats",
+   "fieldtype": "Int",
+   "label": "number_of_bookable_seats"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Data",
+   "label": "currency"
+  },
+  {
+   "fieldname": "total_price",
+   "fieldtype": "Currency",
+   "label": "total_price"
+  },
+  {
+   "fieldname": "base_price",
+   "fieldtype": "Currency",
+   "label": "base_price"
+  },
+  {
+   "fieldname": "grand_total_price",
+   "fieldtype": "Currency",
+   "label": "grand_total_price"
+  },
+  {
+   "fieldname": "itineraries",
+   "fieldtype": "Table",
+   "label": "Itineraries",
+   "options": "Itineraries"
+  },
+  {
+   "fieldname": "traveler_pricings",
+   "fieldtype": "Table",
+   "label": "Traveler Pricings",
+   "options": "Traveler Pricings"
+  },
+  {
+   "fieldname": "fees",
+   "fieldtype": "Table",
+   "label": "Fees",
+   "options": "Fees"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-22 12:30:42.146364",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Flight Offer",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

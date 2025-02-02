@@ -18,13 +18,32 @@ app_license = "mit"
 
 # Cron Scheduler that be triggered everyday at 12:00:00 AM
 scheduler_events = {
-	"cron":{
+    "cron":{
 		"0 0 * * *": [
 			"travels.api.update_booking_status"
 		]
 	}
 }
+# override_doctype_class = {
+#     "Payment Entry": "travels.overrides.payment_entry.MyCustomPaymentEntry"
+# }
+doc_events = {
+    "Payment Entry": {
+        "on_submit": "travels.overrides.payment_entry.update_outstanding",
+        "validate": "travels.overrides.payment_entry.validate_amounts"
 
+    }
+}
+# /home/frappe/frappe-bench/apps/travels/travels/overrides/payment_entry.py
+# override_whitelisted_methods = {
+#     "travels.api.fetch_and_store_flight_offers": "travels.api.fetch_and_store_flight_offers"
+# }
+override_whitelisted_methods = {
+    "travels.api.fetch_and_store_flight_offers": "travels.api.fetch_and_store_flight_offers",
+    "travels.api.fetch_and_store_hotels": "travels.api.fetch_and_store_hotels"
+
+}
+# /home/frappe/frappe-bench/apps/travels/travels/api.py
 
 # /home/frappe/frappe-bench/apps/travels/travels/api.py
 

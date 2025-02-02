@@ -16,6 +16,8 @@
   "hotel_booking",
   "car_rental_booking",
   "total",
+  "outstanding",
+  "status",
   "section_break_qjsn",
   "debit_to",
   "income_account",
@@ -234,12 +236,27 @@
   {
    "fieldname": "column_break_kttb",
    "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "-1",
+   "fieldname": "outstanding",
+   "fieldtype": "Currency",
+   "label": "Outstanding"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Unpaid",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Paid\nUnpaid\nPartially Paid"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-01-19 13:14:26.183851",
+ "modified": "2025-02-02 11:25:05.094204",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Booking Services",
@@ -271,5 +288,18 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [
+  {
+   "color": "Green",
+   "title": "Paid"
+  },
+  {
+   "color": "Yellow",
+   "title": "Partially Paid"
+  },
+  {
+   "color": "Red",
+   "title": "Unpaid"
+  }
+ ]
 }

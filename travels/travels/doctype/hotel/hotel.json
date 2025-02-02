@@ -14,7 +14,7 @@
   "column_break_whpl",
   "website",
   "address_section",
-  "country",
+  "country_code",
   "column_break_cnhn",
   "city",
   "column_break_ixno",
@@ -44,8 +44,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Type",
-   "options": "Hotel Type",
-   "reqd": 1
+   "options": "Hotel Type"
   },
   {
    "fieldname": "column_break_cidr",
@@ -53,11 +52,9 @@
   },
   {
    "fieldname": "category",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Category",
-   "options": "Hotel Category",
-   "reqd": 1
+   "label": "Category"
   },
   {
    "fieldname": "column_break_whpl",
@@ -75,14 +72,6 @@
    "label": "Address"
   },
   {
-   "fieldname": "country",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Country",
-   "options": "Country",
-   "reqd": 1
-  },
-  {
    "fieldname": "column_break_cnhn",
    "fieldtype": "Column Break"
   },
@@ -90,8 +79,7 @@
    "fieldname": "city",
    "fieldtype": "Link",
    "label": "City",
-   "options": "City",
-   "reqd": 1
+   "options": "City"
   },
   {
    "fieldname": "column_break_ixno",
@@ -100,8 +88,7 @@
   {
    "fieldname": "main_address",
    "fieldtype": "Data",
-   "label": "Main Address",
-   "reqd": 1
+   "label": "Main Address"
   },
   {
    "fieldname": "contact_section",
@@ -111,8 +98,7 @@
   {
    "fieldname": "phone_number",
    "fieldtype": "Phone",
-   "label": "Phone Number",
-   "reqd": 1
+   "label": "Phone Number"
   },
   {
    "fieldname": "column_break_kurb",
@@ -132,14 +118,18 @@
   {
    "fieldname": "commission_rate",
    "fieldtype": "Float",
-   "label": "Commission Rate",
-   "reqd": 1
+   "label": "Commission Rate"
   },
   {
    "fieldname": "email",
    "fieldtype": "Data",
    "label": "Email ",
    "options": "Email"
+  },
+  {
+   "fieldname": "country_code",
+   "fieldtype": "Data",
+   "label": "Country Code"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -149,7 +139,7 @@
    "link_fieldname": "hotel"
   }
  ],
- "modified": "2025-01-19 13:16:18.774473",
+ "modified": "2025-01-31 15:30:10.240914",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Hotel",
