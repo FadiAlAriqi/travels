@@ -18,9 +18,30 @@ app_license = "mit"
 
 scheduler_events = {
     "every_minute": [
-        "travels.travels.api.update_booking_status"
+        "travels.api.update_booking_status"
     ]
 }
+# override_doctype_class = {
+#     "Payment Entry": "travels.overrides.payment_entry.MyCustomPaymentEntry"
+# }
+doc_events = {
+    "Payment Entry": {
+        "on_submit": "travels.overrides.payment_entry.update_outstanding",
+        "validate": "travels.overrides.payment_entry.validate_amounts"
+
+    }
+}
+# /home/frappe/frappe-bench/apps/travels/travels/overrides/payment_entry.py
+# override_whitelisted_methods = {
+#     "travels.api.fetch_and_store_flight_offers": "travels.api.fetch_and_store_flight_offers"
+# }
+override_whitelisted_methods = {
+    "travels.api.fetch_and_store_flight_offers": "travels.api.fetch_and_store_flight_offers",
+    "travels.api.fetch_and_store_hotels": "travels.api.fetch_and_store_hotels"
+
+}
+# /home/frappe/frappe-bench/apps/travels/travels/api.py
+
 # /home/frappe/frappe-bench/apps/travels/travels/api.py
 
 # required_apps = []

@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-23 20:55:06.710064",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "chaincode",
+  "iatacode",
+  "dupeid",
+  "hotelid",
+  "countrycode",
+  "rating",
+  "lastupdate",
+  "amenities",
+  "distance"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "name",
+   "unique": 1
+  },
+  {
+   "fieldname": "chaincode",
+   "fieldtype": "Data",
+   "label": "chainCode"
+  },
+  {
+   "fieldname": "iatacode",
+   "fieldtype": "Data",
+   "label": "iataCode"
+  },
+  {
+   "fieldname": "dupeid",
+   "fieldtype": "Data",
+   "label": "dupeId"
+  },
+  {
+   "fieldname": "hotelid",
+   "fieldtype": "Data",
+   "label": "hotelId"
+  },
+  {
+   "fieldname": "countrycode",
+   "fieldtype": "Data",
+   "label": "countryCode"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Data",
+   "label": "rating"
+  },
+  {
+   "fieldname": "lastupdate",
+   "fieldtype": "Datetime",
+   "label": "lastUpdate"
+  },
+  {
+   "fieldname": "amenities",
+   "fieldtype": "Table",
+   "label": "Amenities",
+   "options": "Amenitiess"
+  },
+  {
+   "fieldname": "distance",
+   "fieldtype": "Table",
+   "label": "Distance",
+   "options": "Distance"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_virtual": 1,
+ "links": [],
+ "modified": "2025-01-23 21:00:30.213717",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "hotels23",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
