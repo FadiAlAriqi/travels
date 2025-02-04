@@ -7,6 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_rkny",
+  "column_break_oghu",
   "passenger_name",
   "seat_number",
   "status",
@@ -16,18 +17,24 @@
   "trip_type",
   "ticket_type",
   "section_break_xitw",
+  "column_break_bswy",
   "departure_airport",
   "departure_station",
   "column_break_cbbi",
   "arrival_airport",
   "arrival_station",
   "section_break_dcyb",
+  "column_break_lyxw",
   "departure_date",
-  "column_break_jxfq",
   "departure_time",
+  "column_break_cdck",
+  "arrival_date",
+  "arrival_time",
   "section_break_btkf",
+  "column_break_zlxt",
   "preference",
   "section_break_iand",
+  "column_break_yrpg",
   "trip_price",
   "total_ticket_amount",
   "airline",
@@ -43,6 +50,7 @@
    "fieldtype": "Section Break"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "passenger_name",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -51,15 +59,18 @@
    "reqd": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "seat_number",
    "fieldtype": "Data",
    "label": "Seat Number"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "column_break_xubd",
    "fieldtype": "Column Break"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "trip",
    "fieldtype": "Link",
    "label": "Trip",
@@ -73,6 +84,7 @@
    "label": "Trip Type"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "ticket_type",
    "fieldtype": "Select",
    "label": "Ticket Type",
@@ -85,6 +97,7 @@
    "fieldtype": "Section Break"
   },
   {
+   "allow_in_quick_entry": 1,
    "depends_on": "eval:doc.trip_type === 'Flight'",
    "fetch_from": "trip.departure_airport",
    "fieldname": "departure_airport",
@@ -93,6 +106,7 @@
    "options": "Airport"
   },
   {
+   "allow_in_quick_entry": 1,
    "depends_on": "eval:doc.trip_type === 'Road Trip'",
    "fetch_from": "trip.departure_station",
    "fieldname": "departure_station",
@@ -101,10 +115,12 @@
    "options": "Transport Company Station"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "column_break_cbbi",
    "fieldtype": "Column Break"
   },
   {
+   "allow_in_quick_entry": 1,
    "depends_on": "eval:doc.trip_type === 'Flight'",
    "fetch_from": "trip.arrival_airport",
    "fieldname": "arrival_airport",
@@ -113,6 +129,7 @@
    "options": "Airport"
   },
   {
+   "allow_in_quick_entry": 1,
    "depends_on": "eval:doc.trip_type === 'Road Trip'",
    "fetch_from": "trip.arrival_station",
    "fieldname": "arrival_station",
@@ -126,16 +143,14 @@
    "fieldtype": "Section Break"
   },
   {
+   "allow_in_quick_entry": 1,
    "fetch_from": "trip.departure_date",
    "fieldname": "departure_date",
    "fieldtype": "Date",
    "label": "Departure Date"
   },
   {
-   "fieldname": "column_break_jxfq",
-   "fieldtype": "Column Break"
-  },
-  {
+   "allow_in_quick_entry": 1,
    "fetch_from": "trip.departure_time",
    "fieldname": "departure_time",
    "fieldtype": "Time",
@@ -167,6 +182,7 @@
    "fieldtype": "Section Break"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "trip_price",
    "fieldtype": "Currency",
    "label": "Trip Price",
@@ -210,11 +226,53 @@
    "fieldtype": "Select",
    "label": "Booking Status",
    "options": "Booked\nCompleted\nCanceled"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "column_break_bswy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "column_break_lyxw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yrpg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "column_break_oghu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zlxt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "column_break_cdck",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "trip.arrival_date",
+   "fieldname": "arrival_date",
+   "fieldtype": "Date",
+   "label": "Arrival Date"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "trip.arrival_time",
+   "fieldname": "arrival_time",
+   "fieldtype": "Time",
+   "label": "Arrival Time"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-02 15:33:07.153904",
+ "modified": "2025-02-04 13:38:19.009793",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Ticket Booking",
@@ -241,6 +299,7 @@
    "write": 1
   }
  ],
+ "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [

@@ -206,7 +206,7 @@ def make_payment_entry_from_transport_company(source_name, target_doc=None):
     return doc
 
 @frappe.whitelist()
-def make_payment_entry_from_ticket(source_name):
+def make_payment_entry_from_ticket(source_name):ؤي
     def update_item(source, target, source_parent):
         target.party_type = "Supplier"
         target.party = source.airline
