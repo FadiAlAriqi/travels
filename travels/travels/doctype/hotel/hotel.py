@@ -14,7 +14,7 @@ class Hotel(Document):
             supplier_doc = frappe.get_doc("Supplier", existing_supplier)
             supplier_doc.phone_number = self.phone_number
             supplier_doc.email = self.email
-            supplier_doc.country = self.country
+            # supplier_doc.country = self.country
             supplier_doc.save()
             # frappe.msgprint(f"Supplier '{self.name}' updated successfully!")
         else:
@@ -24,7 +24,7 @@ class Hotel(Document):
                 "supplier_group": "Hotel",
                 "phone_number": self.phone_number,
                 "email": self.email,
-                "country": self.country,
+                # "country": self.country,
             })
             supplier_doc.insert(ignore_permissions=True)
             # frappe.msgprint(f"Supplier '{self.name}' created successfully!")

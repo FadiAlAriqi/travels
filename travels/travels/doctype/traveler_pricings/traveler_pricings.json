@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-22 08:41:00.532597",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "traveler_id",
+  "fare_option",
+  "traveler_type",
+  "currency",
+  "total_price",
+  "base_price",
+  "fare_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "traveler_id",
+   "fieldtype": "Data",
+   "label": "traveler_id"
+  },
+  {
+   "fieldname": "fare_option",
+   "fieldtype": "Data",
+   "label": "fare_option"
+  },
+  {
+   "fieldname": "traveler_type",
+   "fieldtype": "Data",
+   "label": "traveler_type"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Data",
+   "label": "currency"
+  },
+  {
+   "fieldname": "total_price",
+   "fieldtype": "Currency",
+   "label": "total_price"
+  },
+  {
+   "fieldname": "base_price",
+   "fieldtype": "Currency",
+   "label": "base_price"
+  },
+  {
+   "fieldname": "fare_details",
+   "fieldtype": "Link",
+   "label": "Fare Details",
+   "options": "Fare Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-22 08:42:34.162853",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Traveler Pricings",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

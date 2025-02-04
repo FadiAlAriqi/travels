@@ -35,7 +35,11 @@ frappe.ui.form.on("Booking Services", {
         };
     },
          
-        
+    onload: function(frm) {
+        if (frm.doc.outstanding === -1.00) {
+            frm.toggle_display('outstanding', false);
+        }
+    },
             show_general_ledger: function(frm) {
                 frm.add_custom_button(
                     __("Ledger"),

@@ -1,0 +1,203 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-03 10:19:59.195162",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_bef6",
+  "ticket_booking",
+  "amended_from",
+  "column_break_ycte",
+  "hotel_booking",
+  "column_break_kbqx",
+  "car_booking",
+  "column_break_akbb",
+  "status",
+  "section_break_frwk",
+  "customer",
+  "phone_number",
+  "email",
+  "column_break_yffq",
+  "section_break_qluu",
+  "ticket",
+  "hotel",
+  "vehicle",
+  "section_break_awyv",
+  "total",
+  "column_break_bibi",
+  "outstanding",
+  "section_break_bxeq",
+  "debit_to",
+  "column_break_jpbz",
+  "income_account"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_bef6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Booking Service",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "ticket_booking",
+   "fieldtype": "Button",
+   "label": "Ticket Booking "
+  },
+  {
+   "fieldname": "column_break_ycte",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hotel_booking",
+   "fieldtype": "Button",
+   "label": "Hotel Booking"
+  },
+  {
+   "fieldname": "column_break_kbqx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "car_booking",
+   "fieldtype": "Button",
+   "label": "Car Booking"
+  },
+  {
+   "fieldname": "section_break_frwk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Passenger"
+  },
+  {
+   "fetch_from": "customer.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fetch_from": "customer.phone_number",
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "section_break_awyv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total Booking Service"
+  },
+  {
+   "fieldname": "column_break_bibi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "outstanding",
+   "fieldtype": "Currency",
+   "label": "Outstanding"
+  },
+  {
+   "default": "Unpaid",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Paid\nUnpaid\nPartially Paid"
+  },
+  {
+   "fieldname": "section_break_bxeq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Debtors - YF",
+   "fieldname": "debit_to",
+   "fieldtype": "Link",
+   "label": "Debit To",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_jpbz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Cash - YF",
+   "fieldname": "income_account",
+   "fieldtype": "Link",
+   "label": "Income Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "section_break_qluu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ticket",
+   "fieldtype": "Table",
+   "label": "Ticket",
+   "options": "Tickets Package",
+   "read_only": 1
+  },
+  {
+   "fieldname": "hotel",
+   "fieldtype": "Table",
+   "label": "Hotel",
+   "options": "Hotel Rental Package",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Table",
+   "label": "Vehicle",
+   "options": "Vehicle Rental Package",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_akbb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yffq",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-03 19:58:37.004053",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Booking Service",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

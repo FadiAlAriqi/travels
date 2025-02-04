@@ -124,6 +124,21 @@ class BookingServices(AccountsController):
         # إنشاء القيود المحاسبية
         self.make_gl_entries()
 
+    def on_update(self):
+        if self.outstanding == -1.00:
+            self.outstanding = self.total
+            self.db_update() 
+        if self.total == self.outstanding:
+            self.status = "Unpaid"
+            self.db_update() 
+
+    def on_update_after_submit(self):
+        new_status = "Paid" if self.outstanding == 0 else "Partially Paid" if self.outstanding < self.total else self.status
+
+        frappe.db.set_value(self.doctype, self.name, "status", new_status)
+        frappe.db.commit()
+
+        
 
     def make_gl_entries(self):
         # إعداد قيود الحسابات المدينة (debit)
